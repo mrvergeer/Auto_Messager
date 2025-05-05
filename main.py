@@ -88,8 +88,8 @@ for _, row in df[df['birthday'] == today_dm].iterrows():
     if friend.comms_pref.lower() == 'whatsapp':
         twilio_params = {
             "body": message_body,
-            "phone_from": "whatsapp:+14155238886",  # Replace with your Twilio number
-            "phone_to": f"whatsapp:{friend.phone}",
+            "phone_from": '+18337712335', #"whatsapp:+14155238886",  # Replace with your Twilio number
+            "phone_to": f"{friend.phone}", #f"whatsapp:{friend.phone}",
         }
         if send_media and public_image_url:
             twilio_params["media_url"] = [public_image_url]

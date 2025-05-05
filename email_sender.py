@@ -56,20 +56,3 @@ def send_email_with_inline_image(email_subject,
         print(f"Error sending email with inline image to {recipient_email}: {e}")
         return False
 
-
-if __name__ == '__main__':
-    # Example usage:
-    subject = "Birthday Greeting with Inline Image!"
-    body_text = "Happy birthday! (Image should be displayed below)"
-    image_path = "path/to/your/local/image.png"  # Replace with the actual path
-    body_html = f"""
-        <html>
-        <body>
-            <p>Happy birthday!</p>
-            <img src="cid:birthday_image" alt="Birthday Image">
-            <p>Have a great day!</p>
-        </body>
-        </html>
-        """
-    recipient = "friend@example.com"
-    send_email_with_inline_image(subject, body_text, body_html, recipient, image_path)
